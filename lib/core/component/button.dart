@@ -18,7 +18,7 @@ class ButtonComp extends StatelessWidget {
     required this.action,
   });
 
-  final Icon? icon;
+  final Widget? icon;
   final String? text;
   final TextStyle? textStyle;
   final int? elevation;
@@ -43,11 +43,11 @@ class ButtonComp extends StatelessWidget {
         fixedSize: size ?? Size(Get.width, 45),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
-            ScaleSize.scale(context, borderRadius?.toDouble() ?? 5),
+            ScaleSize.scale(Get.context as BuildContext, borderRadius?.toDouble() ?? 5),
           ),
           side: BorderSide(
             color: borderColor ?? Colors.transparent,
-            width: ScaleSize.scale(context, borderRadius?.toDouble() ?? 5),
+            width: ScaleSize.scale(Get.context as BuildContext, borderRadius?.toDouble() ?? 5),
           ),
         ),
       ),
@@ -57,7 +57,7 @@ class ButtonComp extends StatelessWidget {
         children: [
           icon ?? const SizedBox(),
           Text(
-            textScaler: TextScaler.linear(ScaleSize.textScaleFactor(context)),
+            textScaler: TextScaler.linear(ScaleSize.textScaleFactor(Get.context as BuildContext)),
             '$text',
             style: textStyle ?? Theme.of(context).textTheme.bodyLarge,
           ),

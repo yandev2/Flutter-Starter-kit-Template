@@ -24,8 +24,8 @@ class MainController extends GetxController {
 
   Future loadApp() async {
     final authToken = await getToken();
-    if (authToken != '') {
-      await auth.autoLogin(authToken!);
+    if (authToken != null) {
+      await auth.autoLogin(authToken);
     } else {
       Get.offNamed(RouteName.login);
     }

@@ -10,6 +10,7 @@ import 'package:get/get.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   runApp(const MyApp());
 }
 
@@ -27,8 +28,8 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             initialBinding: MainBinding(),
             getPages: RouteApp.route,
-            theme: lightTheme,
-            darkTheme: darkTheme,
+            theme: lightTheme(context),
+            darkTheme: darkTheme(context),
             themeMode: themeMode.value == 'dark' ? ThemeMode.dark : ThemeMode.light,
             home: MainApp(),
           ),

@@ -9,7 +9,7 @@ SnackbarController errorSnacbar(String messege) {
     '',
     duration: const Duration(seconds: 3),
     icon: Padding(
-      padding: EdgeInsets.all(ScaleSize.scale(Get.context as BuildContext, 5)),
+      padding: EdgeInsets.all(ScaleSize.scale( Get.context as BuildContext,5)),
       child: Image.asset(
         IconEnums.error,
         width: 20 * ScaleSize.imageScale(Get.context as BuildContext),
@@ -41,7 +41,7 @@ SnackbarController successSnacbar(String messege) {
       padding: EdgeInsets.all(ScaleSize.scale(Get.context as BuildContext, 5)),
       child: Image.asset(
         IconEnums.success,
-        width: 20 * ScaleSize.imageScale(Get.context as BuildContext),
+        width: 20 * ScaleSize.imageScale(Get.context as BuildContext,),
       ),
     ),
     titleText: Text(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/core/theme/color_theme.dart';
 import 'package:flutter_app/core/utils/responsif.dart';
+import 'package:get/get.dart';
 
 class FormComp extends StatelessWidget {
   const FormComp({
@@ -43,15 +44,17 @@ class FormComp extends StatelessWidget {
       controller: controller,
       style:
           textStyle ??
-          Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: ScaleSize.font(context, 12)),
+          Theme.of(context).textTheme.bodyLarge?.copyWith(
+            fontSize: ScaleSize.font(Get.context as BuildContext, 12),
+          ),
       readOnly: readOnly ?? false,
       keyboardType: type,
       obscureText: obsecure ?? false,
       maxLines: maxLines ?? 1,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(
-          horizontal: ScaleSize.scale(context, 10),
-          vertical: ScaleSize.scale(context, 10),
+          horizontal: ScaleSize.scale(Get.context as BuildContext, 10),
+          vertical: ScaleSize.scale(Get.context as BuildContext, 10),
         ),
         enabled: true,
         filled: true,
@@ -62,7 +65,7 @@ class FormComp extends StatelessWidget {
         // hintStyle: GoogleFonts.outfit(),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(
-            ScaleSize.scale(context, borderRadius?.toDouble() ?? 5),
+            ScaleSize.scale(Get.context as BuildContext, borderRadius?.toDouble() ?? 5),
           ),
           borderSide: BorderSide(
             width: borderWidth?.toDouble() ?? 1,
@@ -71,7 +74,7 @@ class FormComp extends StatelessWidget {
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(
-            ScaleSize.scale(context, borderRadius?.toDouble() ?? 5),
+            ScaleSize.scale(Get.context as BuildContext, borderRadius?.toDouble() ?? 5),
           ),
           borderSide: BorderSide(
             width: borderWidth?.toDouble() ?? 1,
