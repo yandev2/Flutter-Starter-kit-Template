@@ -1,0 +1,32 @@
+class LoadingEnums {
+  static const rotatingPlain = 'RotatingPlain';
+  static const doubleBounce = 'DoubleBounce';
+  static const wave = 'Wave';
+  static const wanderingCubes = 'WanderingCubes';
+  static const fadingFour = 'FadingFour';
+  static const fadingCube = 'FadingCube';
+  static const pulse = 'Pulse';
+  static const chasingDots = 'ChasingDots';
+  static const threeBounce = 'ThreeBounce';
+  static const circle = 'Circle';
+  static const cubeGrid = 'CubeGrid';
+  static const fadingCircle = 'FadingCircle';
+  static const rotatingCircle = 'RotatingCircle';
+  static const foldingCube = 'FoldingCube';
+  static const pumpingHeart = 'PumpingHeart';
+  static const hourGlass = 'HourGlass';
+  static const pouringHourGlass = 'PouringHourGlass';
+  static const pouringHourGlassRefined = 'PouringHourGlassRefined';
+  static const fadingGrid = 'FadingGrid';
+  static const ring = 'Ring';
+  static const ripple = 'Ripple';
+  static const spinningCircle = 'SpinningCircle';
+  static const spinningLines = 'SpinningLines';
+  static const squareCircle = 'SquareCircle';
+  static const dualRing = 'DualRing';
+  static const pianoWave = 'PianoWave';
+  static const dancingSquare = 'DancingSquare';
+  static const threeInOut = 'ThreeInOut';
+  static const waveSpinner = 'WaveSpinner';
+  static const pulsingGrid = 'PulsingGrid';
+}
