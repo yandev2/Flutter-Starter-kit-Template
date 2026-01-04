@@ -1,0 +1,39 @@
+
+import 'package:shared_preferences/shared_preferences.dart';
+
+class PreferenceService {
+  Future<String?> getString(String key) async {
+    final pref = await SharedPreferences.getInstance();
+    return pref.getString(key);
+  }
+
+  Future setString(String key, String value) async {
+    final pref = await SharedPreferences.getInstance();
+    return pref.setString(key, value);
+  }
+
+  Future<List<String>> getStringList(String key) async {
+    final pref = await SharedPreferences.getInstance();
+    return pref.getStringList(key) ?? [];
+  }
+
+  Future setStringList(String key, List<String> value) async {
+    final pref = await SharedPreferences.getInstance();
+    return pref.setStringList(key, value);
+  }
+
+  Future remove(String key) async {
+    final pref = await SharedPreferences.getInstance();
+    return pref.remove(key);
+  }
+
+  Future<int?> getInt(String key) async {
+    final pref = await SharedPreferences.getInstance();
+    return pref.getInt(key);
+  }
+
+  Future setInt(String key, int value) async {
+    final pref = await SharedPreferences.getInstance();
+    return pref.setInt(key, value);
+  }
+}
